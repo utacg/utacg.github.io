@@ -1048,6 +1048,7 @@ textarea:focus ~ .highlight {
     transform-origin: 0 50%;
     -webkit-animation: lens-in 0.6s linear 0.9s forwards;
     animation: lens-in 0.6s linear 0.9s forwards; }
+
   #search-wrapper #search {
     color: #ffffff;
     background: none;
@@ -1057,8 +1058,13 @@ textarea:focus ~ .highlight {
     padding: 0 9px;
     border-radius: 1000px;
     width: 0;
-    transition: all 0.3s 0.6s;
+    transition: all 0.3s 0.2s;
     font-size: 12px; }
+
+  .header-area.sticky #search-wrapper #search {
+    color: #000000;
+  }
+
     #search-wrapper #search::-webkit-input-placeholder {
       color: rgba(255, 255, 255, 0.6); }
     #search-wrapper #search:focus {
