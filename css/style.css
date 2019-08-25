@@ -13,12 +13,12 @@
 /* :: Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700|Work+Sans:300,400,500,600,700");
 /* :: Import All CSS */
-@import url(css/bootstrap.min.css);
-@import url(css/animate.css);
-@import url(css/owl.carousel.css);
-@import url(css/magnific-popup.css);
-@import url(css/font-awesome.min.css);
-@import url(css/themify-icons.css);
+@import url(bootstrap.min.css);
+@import url(animate.css);
+@import url(owl.carousel.css);
+@import url(magnific-popup.css);
+@import url(font-awesome.min.css);
+@import url(themify-icons.css);
 /* :: Base CSS */
 * {
   margin: 0;
@@ -342,6 +342,10 @@ img {
             padding: 0.5em; } }
       .header-area .navbar .navbar-nav .nav-item.active .nav-link {
         color: #ffffff; }
+
+      .header-area.sticky .navbar .navbar-nav .nav-item .nav-link {
+        color: #000000; }
+      
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .header-area .navbar .navbar-nav {
           margin-right: 30px; } }
@@ -349,8 +353,8 @@ img {
     background-color: rgba(255, 230, 230, 0.9);
     margin-top: 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); }
-    .header-area.sticky .navbar {
-      border-color: #ffffff; }
+  .header-area.sticky .navbar {
+    border-color: #ffffff; }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -1044,6 +1048,7 @@ textarea:focus ~ .highlight {
     transform-origin: 0 50%;
     -webkit-animation: lens-in 0.6s linear 0.9s forwards;
     animation: lens-in 0.6s linear 0.9s forwards; }
+
   #search-wrapper #search {
     color: #ffffff;
     background: none;
@@ -1053,10 +1058,13 @@ textarea:focus ~ .highlight {
     padding: 0 9px;
     border-radius: 1000px;
     width: 0;
-    transition: all 0.3s 0.6s;
+    transition: all 0.3s 0.2s;
     font-size: 12px; }
-    #search-wrapper #search::-webkit-input-placeholder {
-      color: rgba(255, 255, 255, 0.6); }
+
+  .header-area.sticky #search-wrapper #search {
+    color: #000000;
+  }
+
     #search-wrapper #search:focus {
       width: 300px;
       padding: 7px 15px; }
