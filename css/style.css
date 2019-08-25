@@ -1065,8 +1065,6 @@ textarea:focus ~ .highlight {
     color: #000000;
   }
 
-    #search-wrapper #search::-webkit-input-placeholder {
-      color: rgba(255, 255, 255, 0.6); }
     #search-wrapper #search:focus {
       width: 300px;
       padding: 7px 15px; }
