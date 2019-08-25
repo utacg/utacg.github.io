@@ -467,7 +467,7 @@ ol {
 	padding: 16px 36px;
 	font-size: 16px;
 	font-weight: 700;
-	background: #6f2b95;
+	background: salmon;
 	line-height: 1.1;
 	margin-right: 7px;
 	-webkit-transition: all 0.3s;
@@ -477,7 +477,7 @@ ol {
 }
 
 .blog-filter li a:hover {
-	background: salmon;
+	background: pink;
 }
 
 .blog-item {
