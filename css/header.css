@@ -58,7 +58,10 @@
   .header-area.sticky {
     background-color: black;
     margin-top: 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); }
+		padding-top: 10px;
+		padding-bottom: 8px;
+    box-shadow:0 0 12px 3px rgba(255, 112, 126, 0.5)
+	}
   .header-area.sticky .navbar {
     border-color: #000000;
   }
