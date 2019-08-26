@@ -71,9 +71,12 @@
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #worldNav {
-    background-color: #000000;
-    padding: 30px; } }
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 5px;
+    padding: 30px;
+   } }
 @media only screen and (max-width: 767px) {
   #worldNav {
-    background-color: #000000;
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0.4);;
     padding: 15px 15px 30px 15px; } }
