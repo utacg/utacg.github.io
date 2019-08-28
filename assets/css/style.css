@@ -1573,3 +1573,9 @@ ol {
 		margin-bottom: 20px;
 	}
 }
+
+
+.trans-hover:hover{
+	background: transparent !important;
+	color: salmon;
+}
