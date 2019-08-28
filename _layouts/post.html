@@ -6,8 +6,9 @@ layout: default
     <div class="page-info">
         <h2>{{page.title}}</h2>
         <div class="site-breadcrumb">
-            <a href="/" class="purple-text">主页</a> /
-            <a href="/blogs.html" class="purple-text">推文</a>
+            <a href="/">主页</a> /
+            <a href="/blogs.html">推文</a> /
+            <a href="">{{page.title}}</a>
         </div>
     </div>
 </section>
@@ -24,13 +25,11 @@ layout: default
                 <div class="gs-meta">{{page.date | date_to_string}}</div>
                 <h2 class="gs-title">{{page.title}}</h2>
                 {{content}}
-                <div class="geme-social-share pt-5 d-flex">
+                <div class="d-flex pt-5">
                     <p>Share:</p>
-                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                    <a href="#"><i class="fa fa-behance"></i></a>
+                    <a href="#"><i class="fa fa-facebook fa-2x mr-3 ml-2"></i></a>
+                    <a href="#"><i class="fa fa-twitter fa-2x mr-3"></i></a>
+                    <a href="#"><i class="fa fa-youtube fa-2x"></i></a>
                 </div>
             </div>
             <div class="col-xl-3 col-lg-4 col-md-5 sidebar game-page-sideber">

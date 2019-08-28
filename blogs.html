@@ -5,10 +5,10 @@ layout: default
 	<!-- Page top section -->
 	<section class="page-top-section set-bg" data-setbg="assets/img/page-top-bg/2.jpg">
 		<div class="page-info">
-			<h2>Reviews</h2>
+			<h2>推文</h2>
 			<div class="site-breadcrumb">
-				<a href="">Home</a>  /
-				<span>Reviews</span>
+				<a href="/">主页</a>  /
+				<a href="/blogs.html">推文</a>
 			</div>
 		</div>
 	</section>
@@ -19,23 +19,7 @@ layout: default
 	<section class="review-section">
 		<div class="container">
 			{%- for post in site.posts -%}
-			<div class="review-item">
-					<div class="row">
-						<div class="col-lg-4">
-							<div class="review-pic">
-								<img src="assets/img/xiubi.png" alt="">
-							</div>
-						</div>
-						<div class="col-lg-8">
-							<div class="review-content text-box text-white">
-								<div class="top-meta">{{post.date | date_to_string}}
-								<h3>{{post.title}}</h3>
-								<p>{{post.excerpt}}</p>
-								<a href="{{post.url}}" class="read-more">Read More  <img src="assets/img/icons/double-arrow.png" alt="#"/></a>
-							</div>
-						</div>
-					</div>
-			</div>			
+			{%- include post_brief.html -%}		
 			{%- endfor -%}
 			<div class="site-pagination">
 				<a href="#" class="active">01.</a>
