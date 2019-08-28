@@ -1,0 +1,81 @@
+---
+layout: default
+---
+<!-- Page top section -->
+<section class="page-top-section set-bg" data-setbg="/assets/img/page-top-bg/1.jpg">
+    <div class="page-info">
+        <h2>{{page.title}}</h2>
+        <div class="site-breadcrumb">
+            <a href="/" class="purple-text">主页</a> /
+            <a href="/blogs.html" class="purple-text">推文</a>
+        </div>
+    </div>
+</section>
+<!-- Page top end-->
+
+<!-- Games section -->
+<section class="games-single-page">
+    <div class="container">
+        <div class="game-single-preview">
+            <img src="/assets/img/games/big.jpg" alt="">
+        </div>
+        <div class="row">
+            <div class="col-xl-9 col-lg-8 col-md-7 game-single-content">
+                <div class="gs-meta">{{page.date | date_to_string}}</div>
+                <h2 class="gs-title">{{page.title}}</h2>
+                {{content}}
+                <div class="geme-social-share pt-5 d-flex">
+                    <p>Share:</p>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                    <a href="#"><i class="fa fa-behance"></i></a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-5 sidebar game-page-sideber">
+                <div id="stickySidebar">
+                    <div class="widget-item">
+                        <div class="rating-widget">
+                            <h4 class="widget-title">Ratings</h4>
+                            <ul>
+                                <li>Price<span>3.5/5</span></li>
+                                <li>Graphics<span>4.5/5</span></li>
+                                <li>Levels<span>3.5/5</span></li>
+                                <li>Levels<span>4.5/5</span></li>
+                                <li>Dificulty<span>4.5/5</span></li>
+                            </ul>
+                            <div class="rating">
+                                <h5><i>Rating</i><span>4.5</span> / 5</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-item">
+                        <div class="testimonials-widget">
+                            <h4 class="widget-title">Testimonials</h4>
+                            <div class="testim-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolo re magna aliqua. Quis ipsum suspend isse ultrices.</p>
+                                <h6><span>James Smith,</span>Gamer</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Games end-->
+
+
+<!-- Newsletter section -->
+<section class="newsletter-section">
+    <div class="container">
+        <h2>Subscribe to our newsletter</h2>
+        <form class="newsletter-form">
+            <input type="text" placeholder="ENTER YOUR E-MAIL">
+            <button class="site-btn">subscribe <img src="/assets/img/icons/double-arrow.png" alt="#" /></button>
+        </form>
+    </div>
+</section>
+<!-- Newsletter section end -->
