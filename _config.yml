@@ -1,1 +1,14 @@
 exclude: [LICENSE, README.md]
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /posts/:title
+  - scope:
+      path: ""
+    values:
+      layout: "default"
