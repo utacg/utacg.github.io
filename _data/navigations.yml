@@ -3,6 +3,6 @@
 - name: 推文
   link: /blogs.html
 - name: 相册
-  link: ./
+  link: /gallery.html
 - name: 联系
   link: /contact.html

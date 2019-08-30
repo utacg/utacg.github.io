@@ -5,25 +5,18 @@
  ------------------------------------
  ====================================*/
 
-
-
 /*----------------------------------------*/
+
 /* Template default CSS
 /*----------------------------------------*/
 
-html,
-body {
+html, body {
 	height: 100%;
 	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	color: #111111;
 	font-weight: 500;
@@ -64,21 +57,16 @@ img {
 	max-width: 100%;
 }
 
-input:focus,
-select:focus,
-button:focus,
-textarea:focus {
+input:focus, select:focus, button:focus, textarea:focus {
 	outline: none;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
 	text-decoration: none;
 	outline: none;
 }
 
-ul,
-ol {
+ul, ol {
 	padding: 0;
 	margin: 0;
 }
@@ -129,16 +117,7 @@ ol {
 	padding-bottom: 105px;
 }
 
-.text-white h1,
-.text-white h2,
-.text-white h3,
-.text-white h4,
-.text-white h5,
-.text-white h6,
-.text-white p,
-.text-white span,
-.text-white li,
-.text-white a {
+.text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6, .text-white p, .text-white span, .text-white li, .text-white a {
 	color: #fff;
 }
 
@@ -174,8 +153,7 @@ ol {
 	display: inline-block !important;
 }
 
-.site-btn:after,
-.site-btn:before {
+.site-btn:after, .site-btn:before {
 	position: absolute;
 	content: "";
 	width: 100%;
@@ -349,9 +327,7 @@ ol {
 	opacity: 0;
 }
 
-.hero-slider .owl-item.active .hero-item h2,
-.hero-slider .owl-item.active .hero-item p,
-.hero-slider .owl-item.active .hero-item .site-btn {
+.hero-slider .owl-item.active .hero-item h2, .hero-slider .owl-item.active .hero-item p, .hero-slider .owl-item.active .hero-item .site-btn {
 	top: 0;
 	opacity: 1;
 }
@@ -743,8 +719,7 @@ ol {
 	color: #251e2f;
 }
 
-.gradient-bg,
-.newsletter-section {
+.gradient-bg, .newsletter-section {
 	background: #3e0f3d;
 	/* Old browsers */
 	/* FF3.6-15 */
@@ -885,8 +860,7 @@ ol {
 	font-size: 48px;
 }
 
-.site-breadcrumb a,
-.site-breadcrumb span {
+.site-breadcrumb a, .site-breadcrumb span {
 	font-style: italic;
 	color: #c313b7;
 	margin: 0 10px;
@@ -1023,10 +997,7 @@ ol {
   Game single Page
 ---------------------*/
 
-.games-single-page,
-.review-section,
-.blog-page,
-.contact-page {
+.games-single-page, .review-section, .blog-page, .contact-page {
 	padding: 104px 0;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#501755+0,2d1854+100 */
 	background: #501755;
@@ -1269,8 +1240,7 @@ ol {
 	margin-bottom: 104px;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
 	width: 100%;
 	border: none;
 	background-color: transparent;
@@ -1453,8 +1423,7 @@ ol {
 		margin-right: 10px;
 		background: #3a3a3a;
 	}
-	.slicknav_nav a:hover,
-	.slicknav_nav .slicknav_row:hover {
+	.slicknav_nav a:hover, .slicknav_nav .slicknav_row:hover {
 		background: #25394c;
 		color: #fff;
 	}
@@ -1464,8 +1433,7 @@ ol {
 	.hero-item p {
 		font-size: 18px;
 	}
-	.footer-right-pic,
-	.footer-left-pic {
+	.footer-right-pic, .footer-left-pic {
 		display: none;
 	}
 	.hero-slider .owl-nav .owl-next {
@@ -1561,8 +1529,7 @@ ol {
 	.featured-box {
 		padding: 100px 15px;
 	}
-	.featured-box .text-box h3,
-	.newsletter-section h2 {
+	.featured-box .text-box h3, .newsletter-section h2 {
 		font-size: 35px;
 	}
 	.navbar-nav li a {
@@ -1574,8 +1541,36 @@ ol {
 	}
 }
 
-
-.trans-hover:hover{
+.trans-hover:hover {
 	background: transparent !important;
 	color: salmon;
+}
+
+.gallery-section {
+	background: #3e0f3d;
+	/* Old browsers */
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #3e0f3d 0%, #1c0f3b 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: -webkit-gradient(linear, left top, right top, from(#3e0f3d), to(#1c0f3b));
+	background: -o-linear-gradient(left, #3e0f3d 0%, #1c0f3b 100%);
+	background: linear-gradient(to right, #3e0f3d 0%, #1c0f3b 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e0f3d', endColorstr='#1c0f3b', GradientType=1);
+	/* IE6-9 */
+}
+
+.gallery-pics {
+	-webkit-transition: all 350ms ease;
+	transition: all 350ms ease;
+}
+
+.gallery-animation {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.width-90 {
+	width: 90%;
 }
