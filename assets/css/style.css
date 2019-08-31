@@ -1582,8 +1582,6 @@ ul, ol {
 
 #event-detail {
 	position: absolute;
-	top: -20px;
-	left: -15px;
 	width: 200px;
 	overflow: auto;
 	z-index: 1;
