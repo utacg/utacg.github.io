@@ -1574,3 +1574,24 @@ ul, ol {
 .width-90 {
 	width: 90%;
 }
+
+.event-link {
+	color: blue;
+	text-decoration: none;
+}
+
+#event-detail {
+	position: absolute;
+	top: -20px;
+	left: -15px;
+	width: 200px;
+	overflow: auto;
+	z-index: 10;
+	background: white;
+	border: 1px black solid;
+	border-radius: 5px;
+}
+
+#event-detail p{
+	margin: 5px;
+}
