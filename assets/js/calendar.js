@@ -21,9 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!info.event.allDay) {
             const start_time = info.event.start.getHours() + ":" + (info.event.start.getMinutes() < 10 ? "0" + info.event.start.getMinutes() : info.event.start.getMinutes());
             const end_time = info.event.end.getHours() + ":" + (info.event.end.getMinutes() < 10 ? "0" + info.event.end.getMinutes() : info.event.end.getMinutes());
-            const offset = $(info.el).offset();
             pop_up = `
-            <div id="event-detail" style="top: ${offset.top}px; left: ${offset.left}px">
+            <div id="event-detail">
                 <p>Details</p>
                 <p>start time: ${start_time}</p>
                 <p>end time: ${end_time}</p>
@@ -33,22 +32,19 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>`;
         }
         else {
-            const offset = $(info.el).offset();
             pop_up = `
-            <div id="event-detail" style="top: ${offset.top}px; left: ${offset.left}px">
+            <div id="event-detail">
                 <p>Details</p>
                 <div class="text-center">
                 <a class="event-link" href="${info.event.url}">links</a>
                 </div>
             </div>`;
         }
-        let target = $(":root");
-        $(pop_up).appendTo(target);
-        $("#event-detail").on("mouseleave", remove_event);
+        $(pop_up).appendTo(info.el);
+    })
+
+    calendar.on("eventMouseLeave", (info) => {
+        $("#event-detail").remove();
     })
     calendar.render();
 });
-
-const remove_event = () => {
-    $("#event-detail").remove();
-}
