@@ -1586,7 +1586,7 @@ ul, ol {
 	left: -15px;
 	width: 200px;
 	overflow: auto;
-	z-index: 10;
+	z-index: 1;
 	background: white;
 	border: 1px black solid;
 	border-radius: 5px;
@@ -1594,4 +1594,8 @@ ul, ol {
 
 #event-detail p{
 	margin: 5px;
+}
+
+#event-detail a{
+	z-index: 2;
 }
