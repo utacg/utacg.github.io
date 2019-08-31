@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     calendar.on("eventClick", (info) => {
         info.jsEvent.preventDefault();
+        window.open(info.event.url);
     })
 
     calendar.on("eventMouseEnter", (info) => {
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <p>start time: ${start_time}</p>
                 <p>end time: ${end_time}</p>
                 <div class="text-center">
-                <a class="event-link" href="${info.event.url}">links</a>
+                <p class="event-link">Click for details</p>
                 </div>
             </div>`;
         }
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div id="event-detail">
                 <p>Details</p>
                 <div class="text-center">
-                <a class="event-link" href="${info.event.url}">links</a>
+                <p class="event-link">Click for details</p>
                 </div>
             </div>`;
         }
