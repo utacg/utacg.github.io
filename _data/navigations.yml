@@ -1,5 +1,7 @@
 - name: 主页
   link: /
+- name: 日历
+  link: /calendar.html
 - name: 推文
   link: /blogs.html
 - name: 相册
