@@ -1,6 +1,6 @@
 - name: 主页
   link: /
-- name: 日历
+- name: 活动日历
   link: /calendar.html
 - name: 推文
   link: /blogs.html
