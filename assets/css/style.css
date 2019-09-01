@@ -1547,7 +1547,7 @@ ul, ol {
 }
 
 .gallery-section {
-	background: #3e0f3d;
+	background: #ffffff;
 	/* Old browsers */
 	/* FF3.6-15 */
 	background: -webkit-linear-gradient(left, #3e0f3d 0%, #1c0f3b 100%);
@@ -1594,6 +1594,12 @@ ul, ol {
 	margin: 5px;
 }
 
+.event-title {
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: 300;
+	color: salmon;
+}
 #mdiv {
 	width: 25px;
 	height: 25px;

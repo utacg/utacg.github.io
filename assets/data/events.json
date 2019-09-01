@@ -5,18 +5,12 @@
             "start": "2019-09-04T15:00:00",
             "end": "2019-09-04T18:00:00",
             "url": "posts/xiubi",
-            "textColor": "white",
-            "start_time": "3:00pm"
-        },
-        {
-            "title": "Club Fair 2",
-            "start": "2019-09-05",
-            "url": "posts/xiubi",
             "textColor": "white"
         },
         {
-            "title": "test",
-            "start": "2019-08-13",
+            "title": "Club Carnival",
+            "start": "2019-09-11T09:00:00",
+            "end": "2019-09-11T15:00:00",
             "url": "posts/xiubi",
             "textColor": "white"
         }

@@ -19,14 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     calendar.on("eventClick", (info) => {
         info.jsEvent.preventDefault();
+        if(info.view.type != "dayGridMonth") return;
         generate_popup(info);
-    })
-
-    calendar.on("eventMouseEnter", (info) => {
-    })
-
-    calendar.on("eventMouseLeave", (info) => {
-        //$("#event-detail").remove();
     })
 
     calendar.render();
@@ -37,32 +31,34 @@ const generate_popup = (info) => {
     if (!info.event.allDay) {
         const start_time = info.event.start.getHours() + ":" + (info.event.start.getMinutes() < 10 ? "0" + info.event.start.getMinutes() : info.event.start.getMinutes());
         const end_time = info.event.end.getHours() + ":" + (info.event.end.getMinutes() < 10 ? "0" + info.event.end.getMinutes() : info.event.end.getMinutes());
-        let x = $(info.el).parent().position();
-        let test = $(info.el).parents(".fc-row").position();
+        let pos = $(info.el).parent().position();
+        let row_pos = $(info.el).parents(".fc-row").position();
         pop_up = `
-        <div id="event-detail" style="top: ${x.top + test.top + 24 - 10}px; left: ${x.left - 15}px">
+        <div id="event-detail" style="top: ${pos.top + row_pos.top + 24 - 10}px; left: ${pos.left - 15}px">
             <div id="mdiv" class="mt-1 mr-1">
                 <div class="mdiv">
                     <div class="md"></div>
                 </div>
             </div>
-            <p>Details</p>
-            <p>start time: ${start_time}</p>
-            <p>end time: ${end_time}</p>
+            <p class="event-title">Details</p>
+            <p>Title: ${info.event.title}</p>
+            <p>Start time: ${start_time}</p>
+            <p>End time: ${end_time}</p>
         </div>`;
     }
     else {
-        let x = $(info.el).parent().position();
-        let test = $(info.el).parents(".fc-row").position();
+        let pos = $(info.el).parent().position();
+        let row_pos = $(info.el).parents(".fc-row").position();
         pop_up = `
-        <div id="event-detail" style="top: ${x.top + test.top + 24 - 10}px; left: ${x.left - 15}px">
+        <div id="event-detail" style="top: ${pos.top + row_pos.top + 24 - 10}px; left: ${pos.left - 15}px">
             <div id="mdiv" class="mt-1 mr-1">
                 <div class="mdiv">
                     <div class="md"></div>
                 </div>
             </div>
-            <p>Details</p>
-            <p>time: All Day</p>
+            <p class="event-title">Details</p>
+            <p>Title: ${info.event.title}</p>
+            <p>Time: All Day</p>
         </div>`;
     }
     const target = $(info.el).parents(".fc-view-container");
