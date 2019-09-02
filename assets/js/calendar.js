@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     let calendarEl = document.querySelector("#calendar");
 
-
     let calendar = new FullCalendar.Calendar(calendarEl, {
-        plugins: ['dayGrid', 'timeGrid'],
+        plugins: ['dayGrid', 'timeGrid', 'list'],
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            right: 'dayGridMonth, listWeek'
         }
     });
 
@@ -20,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if(info.view.type != "dayGridMonth") return;
         generate_popup(info);
     })
+    
     calendar.render();
 });
 
