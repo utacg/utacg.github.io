@@ -2,38 +2,36 @@
 layout: gallery
 ---
 <section class="page-top-section set-bg" data-setbg="assets/img/page-top-bg/2.jpg">
-    <div class="page-info">
-        <h2>相册</h2>
-        <div class="site-breadcrumb">
-            <a href="/">主页</a> /
-            <a href="/gallery.html">相册</a>
-        </div>
+  <div class="page-info">
+    <h2>相册</h2>
+    <div class="site-breadcrumb">
+      <a href="/">主页</a> /
+      <a href="/gallery.html">相册</a>
     </div>
+  </div>
 </section>
 
 <section class="gallery-section">
-    <div class="container width-90">
-        <div class="row" id="gallery">
-            <div class="col-md-12 d-flex justify-content-center pt-5 mb-4">
+  <div class="container width-90">
+    <div class="row" id="gallery">
+      <div class="col-md-12 d-flex justify-content-center pt-5 mb-4 text-white">
+        <ul class="blog-filter">
+          <li><a class="gallery-filter" data-rel="all">所有</a></li>
+          <li><a class="gallery-filter" data-rel="huo_dong">活动</a></li>
+          <li><a class="gallery-filter" data-rel="tou_gao">投稿</a></li>
+          <li><a class="gallery-filter" data-rel="biao_qing_bao">表情包</a></li>
+        </ul>
+      </div>
 
-                <button type="button" class="btn btn-secondary btn-lg waves-effect gallery-filter mr-3"
-                    data-rel="all">所有</button>
-                <button type="button" class="btn btn-secondary btn-md waves-effect gallery-filter mr-3"
-                    data-rel="1">活动</button>
-                <button type="button" class="btn btn-secondary btn-md waves-effect gallery-filter mr-3"
-                    data-rel="2">投稿</button>
-
-            </div>
-
-            <div class="row">
-                {%- for item in site.data.gallery-pic -%}
-                <div class="my-2 mr-2 gallery-pics gallery-animation all {{item.type}}">
-                    <a href="{{item.src}}">
-                        <img class="img-fluid" src="{{item.src}}" alt="" />
-                    </a>
-                </div>
-                {%- endfor -%}
-            </div>
+      <div class="row">
+        {%- for item in site.data.gallery-pic -%}
+        <div class="my-2 mr-2 gallery-pics gallery-animation all {{item.type}}">
+          <a href="{{item.src}}">
+            <img class="img-fluid" src="{{item.src}}" alt="" />
+          </a>
         </div>
+        {%- endfor -%}
+      </div>
     </div>
+  </div>
 </section>
