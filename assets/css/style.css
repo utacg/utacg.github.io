@@ -1575,15 +1575,10 @@ ul, ol {
 	width: 90%;
 }
 
-.event-link {
-	color: blue;
-	text-decoration: none;
-}
-
 #event-detail {
 	position: absolute;
 	width: 200px;
-	overflow: auto;
+	overflow: hidden;
 	z-index: 10;
 	background-color: white;
 	border: 1px black solid;
@@ -1623,4 +1618,20 @@ ul, ol {
 	background-color: black;
 	transform: rotate(90deg);
 	Z-index: 2;
+}
+
+.calendar-event {
+	width: auto;
+	overflow: hidden;
+	height: auto;
+	font-style: italic;
+	font-weight: 700;
+	background-color: #ff7733 !important;
+	border-color: #ff7733 !important;
+}
+
+.calendar-event:hover {
+	background-color: #ff884d !important;
+	border-color: #ff884d !important;
+	box-shadow: 5px 5px 15px #ff9966;
 }
