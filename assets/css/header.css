@@ -56,14 +56,14 @@
         .header-area .navbar .navbar-nav {
           margin-right: 30px; } }
   .header-area.sticky {
-    background-color: black;
+    background-color: rgb(8, 22, 36);
     margin-top: 0;
 		padding-top: 10px;
 		padding-bottom: 8px;
     box-shadow:0 0 12px 3px rgba(255, 112, 126, 0.5)
 	}
   .header-area.sticky .navbar {
-    border-color: #000000;
+    border-color: rgb(8, 22, 36);
   }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
