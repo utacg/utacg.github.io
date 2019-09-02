@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let calendarEl = document.querySelector("#calendar");
 
     let calendar = new FullCalendar.Calendar(calendarEl, {
-        plugins: ['dayGrid', 'timeGrid', 'list'],
+        plugins: ['dayGrid', 'list'],
         header: {
             left: 'prev,next today',
             center: 'title',
@@ -10,18 +10,41 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    let event = $.getJSON("/assets/data/events.json", () => {
-        calendar.addEventSource(JSON.parse(event.responseText));
-    });
+    addSourceToCalendar("/assets/data/events.json", calendar);
 
     calendar.on("eventClick", (info) => {
         info.jsEvent.preventDefault();
         if(info.view.type != "dayGridMonth") return;
         generate_popup(info);
     })
-    
     calendar.render();
+    $(".fc-listWeek-button").on("click", ()=> {
+        const currentSource = calendar.getEventSourceById(1);
+        currentSource.remove();
+        addSourceToCalendar("/assets/data/events.json", calendar, true);
+    });
+
+    $(".fc-dayGridMonth-button").on("click", () => {
+        const currentSource = calendar.getEventSourceById(1);
+        currentSource.remove();
+        addSourceToCalendar("/assets/data/events.json", calendar);
+    });
 });
+
+
+
+
+
+// Helper Function
+const addSourceToCalendar = (url, calendar, default_enabled=false) => {
+    let event = $.getJSON(url, () => {
+        let source_json = JSON.parse(event.responseText);
+        if(default_enabled){
+            delete source_json["className"];
+        }
+        calendar.addEventSource(source_json);
+    });
+}
 
 const generate_popup = (info) => {
     let pop_up = "";
