@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let calendarEl = document.getElementById('calendar');
+    let calendarEl = document.querySelector("#calendar");
+
 
     let calendar = new FullCalendar.Calendar(calendarEl, {
         plugins: ['dayGrid', 'timeGrid'],
@@ -7,14 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
             left: 'prev,next today',
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        }
+        },
+        locale: "zh-cn"
     });
 
     let event = $.getJSON("/assets/data/events.json", () => {
-        const events = JSON.parse(event.responseText)["events"];
-        for (let i = 0; i < events.length; i++) {
-            calendar.addEvent(events[i]);
-        }
+        calendar.addEventSource(JSON.parse(event.responseText));
     });
 
     calendar.on("eventClick", (info) => {
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if(info.view.type != "dayGridMonth") return;
         generate_popup(info);
     })
-
     calendar.render();
 });
 
