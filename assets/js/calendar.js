@@ -61,8 +61,6 @@ const generate_popup = (info) => {
     const target = $(info.el).parents(".fc-view-container");
     $(pop_up).appendTo(target);
     $("#event-detail #mdiv").on("click", (e) => {
-        console.log("click");
-        console.log(e);
         $(e.target).parents("#event-detail").remove();
     });
 }
