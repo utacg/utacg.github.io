@@ -8,9 +8,12 @@
     </div>
     <div class="col-lg-8">
         <div class="review-content text-box text-white">
-            <div class="top-meta">{{post.date | date_to_string}}
+          <div class="rating">
+            <h5><i>Posted on </i><span style="font-size: 0.6em; color: pink">{{post.date | split: " " | first}}</span></h5>
+            </div>
+            <div class="top-meta">
                 <a href="{{post.url}}"><h3>{{post.title}}</h3></a>
-                <p>{{post.content | truncate: 270}}</p>
+                <div class="post-content">{{post.content | truncate: 270}}</div>
                 <a href="{{post.url}}" class="read-more">Read More <img src="/assets/img/icons/double-arrow.png" alt="#" /></a>
             </div>
         </div>
