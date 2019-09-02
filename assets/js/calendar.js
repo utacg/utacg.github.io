@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             left: 'prev,next today',
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        locale: "zh-cn"
+        }
     });
 
     let event = $.getJSON("/assets/data/events.json", () => {
