@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
             left: 'prev,next today',
             center: 'title',
             right: 'dayGridMonth, listWeek'
+        },
+        eventLimit: true,
+        views: {
+            dayGrid: {
+                eventLimit: 4
+            }
         }
     });
 
