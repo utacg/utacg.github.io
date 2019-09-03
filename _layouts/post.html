@@ -4,7 +4,7 @@ layout: default
 <!-- Page top section -->
 <section class="page-top-section set-bg" data-setbg="/assets/img/page-top-bg/1.jpg">
     <div class="page-info">
-        <h2>{{page.title}}-UTACG!</h2>
+        <h2>{{page.title}}</h2>
         <div class="site-breadcrumb">
             <a href="/">主页</a> /
             <a href="/blogs.html">推文</a>
@@ -21,7 +21,7 @@ layout: default
         </div>
         <div class="row">
             <div class="col-xl-9 col-lg-8 col-md-7 game-single-content">
-                <div class="gs-meta">{{page.date | date_to_string}}</div>
+                <div class="gs-meta">{{page.date | split: " " | first}}</div>
                 <h2 class="gs-title">{{page.title}}</h2>
                 {{content}}
                 <div class="d-flex pt-5">
@@ -35,17 +35,15 @@ layout: default
                 <div id="stickySidebar">
                     <div class="widget-item">
                         <div class="rating-widget">
-                            <h4 class="widget-title">Ratings</h4>
+                            <h4 class="widget-title">其他推文</h4>
                             <ul>
-                                <li>Price<span>3.5/5</span></li>
-                                <li>Graphics<span>4.5/5</span></li>
-                                <li>Levels<span>3.5/5</span></li>
-                                <li>Levels<span>4.5/5</span></li>
-                                <li>Dificulty<span>4.5/5</span></li>
+                                {%- for post in site.posts -%}
+                                    {%- assign diff = page.date | minus: post.date -%}
+                                    {%- if diff < 10 and post != page-%}
+                                        <li><a href="{{post.url}}">{{post.title}}</a></li>
+                                    {%- endif -%}
+                                {%- endfor -%}
                             </ul>
-                            <div class="rating">
-                                <h5><i>Rating</i><span>4.5</span> / 5</h5>
-                            </div>
                         </div>
                     </div>
                     <div class="widget-item">
