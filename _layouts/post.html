@@ -41,21 +41,11 @@ layout: default
                                     {%- assign date1 = page.date | date: "%Y%m%d" -%}
                                     {%- assign date2 = post.date | date: "%Y%m%d" -%}
                                     {%- assign diff = date1 | minus: date2 | abs -%}
-                                    {%- if diff < 10 and post != page-%}
-                                        <li><a href="{{post.url}}">{{post.date | split : " " | first}} - {{post.title}} diff:{{diff | abs}}</a></li>
+                                    {%- if diff < 30 and post != page-%}
+                                        <li><a href="{{post.url}}">{{post.date | date: "%Y/%m/%d"}} - {{post.title}}</a></li>
                                     {%- endif -%}
                                 {%- endfor -%}
                             </ul>
-                        </div>
-                    </div>
-                    <div class="widget-item">
-                        <div class="testimonials-widget">
-                            <h4 class="widget-title">Testimonials</h4>
-                            <div class="testim-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolo re magna aliqua. Quis ipsum suspend isse ultrices.</p>
-                                <h6><span>James Smith,</span>Gamer</h6>
-                            </div>
                         </div>
                     </div>
                 </div>
