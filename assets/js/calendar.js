@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     let calendarEl = document.querySelector("#calendar");
 
+    //Initialize the calendar with options
     let calendar = new FullCalendar.Calendar(calendarEl, {
         plugins: ['dayGrid', 'list'],
         header: {
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    //Load event Source into the calendar
     addSourceToCalendar("/assets/data/events.json", calendar);
 
     calendar.on("eventClick", (info) => {
@@ -18,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
         generate_popup(info);
     })
     calendar.render();
+
+    //Added click event handler to 2 buttons
     $(".fc-listWeek-button").on("click", ()=> {
         const currentSource = calendar.getEventSourceById(1);
         currentSource.remove();
