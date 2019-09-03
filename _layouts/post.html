@@ -35,12 +35,14 @@ layout: default
                 <div id="stickySidebar">
                     <div class="widget-item">
                         <div class="rating-widget">
-                            <h4 class="widget-title">其他推文</h4>
+                            <h4 class="widget-title">近期推文</h4>
                             <ul>
-                                {%- for post in site.posts -%}
-                                    {%- assign diff = page.date | minus: post.date -%}
+                                {%- for post in site.posts -%}'
+                                    {%- assign date1 = page.date | date: "%Y%m%d" -%}
+                                    {%- assign date2 = post.date | date: "%Y%m%d" -%}
+                                    {%- assign diff = date1 | minus: date2 | abs -%}
                                     {%- if diff < 10 and post != page-%}
-                                        <li><a href="{{post.url}}">{{post.title}}</a></li>
+                                        <li><a href="{{post.url}}">{{post.date | split : " " | first}} - {{post.title}} diff:{{diff | abs}}</a></li>
                                     {%- endif -%}
                                 {%- endfor -%}
                             </ul>
