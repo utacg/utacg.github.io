@@ -74,6 +74,7 @@ const generate_popup = (info) => {
             <p>Title: ${info.event.title}</p>
             <p>Start time: ${start_time}</p>
             <p>End time: ${end_time}</p>
+            <a href=${info.event.url} class="text-center">Click me for Details!</a>
         </div>`;
     }
     else {
@@ -89,6 +90,7 @@ const generate_popup = (info) => {
             <p class="event-title">Details</p>
             <p>Title: ${info.event.title}</p>
             <p>Time: All Day</p>
+            <a href=${info.event.url} class="text-center">Click me for Details!</a>
         </div>`;
     }
     const target = $(info.el).parents(".fc-view-container");
