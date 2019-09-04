@@ -25,9 +25,9 @@ layout: gallery
 
       <div class="row">
         {%- for item in site.data.gallery-pic -%}
-        <div class="my-2 mr-2 gallery-pics gallery-animation all {{item.type}}">
+        <div class="col-lg-4 col-md-6 col-12 my-2 gallery-pics gallery-animation all {{item.type}}">
           <a href="{{item.src}}">
-            <img class="img-fluid" src="{{item.src}}" alt="" />
+            <img class="img-fluid" src="{{item.src}}" alt=""/>
           </a>
         </div>
         {%- endfor -%}
