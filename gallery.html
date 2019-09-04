@@ -26,12 +26,22 @@ layout: gallery
       <div class="row">
         {%- for item in site.data.gallery-pic -%}
         <div class="col-lg-4 col-md-6 col-12 my-2 gallery-pics gallery-animation all {{item.type}}">
-          <a href="{{item.src}}">
-            <img class="img-fluid" src="{{item.src}}" alt=""/>
-          </a>
+            <img class="img-fluid" src="{{item.src}}" alt="credit: {{item.credit}}"/>
         </div>
         {%- endfor -%}
       </div>
+    </div>
+
+    <div id="myModal" class="modal">
+
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+    
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01">
+    
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
     </div>
   </div>
 </section>
