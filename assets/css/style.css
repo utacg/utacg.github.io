@@ -1723,6 +1723,16 @@ ul, ol {
 	animation-duration: 0.6s;
 }
 
+.shrink {
+	animation-name: shrink;
+	animation-duration: 0.6s;
+}
+
+.fade_away{
+	animation-name: fade-away !important;
+	animation-duration: 0.6s;
+}
+
 @keyframes zoom {
 	from {
 		transform: scale(0)
@@ -1732,6 +1742,23 @@ ul, ol {
 	}
 }
 
+@keyframes shrink {
+	from {
+		transform: scale(1)
+	}
+	to {
+		transform: scale(0)
+	}
+}
+
+@keyframes fade-away {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
 /* The Close Button */
 
 .close {

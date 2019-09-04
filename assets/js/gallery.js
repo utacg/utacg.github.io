@@ -11,7 +11,7 @@ $(function () {
 	});
 });
 
-$("#gallery img").on("click", (e)=> {
+$("#gallery img").on("click", (e) => {
 	const header = document.querySelector(".header-area");
 	header.style.display = "none";
 	const modal = document.getElementById("myModal");
@@ -24,9 +24,18 @@ $("#gallery img").on("click", (e)=> {
 	captionText.innerHTML = target_img.alt;
 })
 
-$(".close").on("click", ()=> {
+$(".close").on("click", () => {
 	const modal = document.getElementById("myModal");
-	modal.style.display = "none";
-	const header = document.querySelector(".header-area");
-	header.style.display = "block";
+	const modalImg = document.getElementById("img01");
+	const captionText = document.getElementById("caption");
+	modalImg.classList.add("shrink");
+	captionText.classList.add("fade_away");
+	console.log(captionText.classList);
+	setTimeout(() => {
+		modal.style.display = "none";
+		const header = document.querySelector(".header-area");
+		header.style.display = "block";
+		modalImg.classList.remove("shrink");
+		captionText.classList.remove("fade_away");
+	}, 550);
 })
