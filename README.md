@@ -1,5 +1,5 @@
 # UTACG Website
-University of Toronto Animation Comic Gaming Association's website.  <a href="utacg.github.io">utacg.github.io</a>
+University of Toronto Animation Comic Gaming Association's website.  <a href="http://utacg.github.io">utacg.github.io</a>
 
 多伦多大学utacg社团的社团主页。
 
