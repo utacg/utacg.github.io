@@ -11,11 +11,6 @@
             "start": "2019-09-11T09:00:00",
             "end": "2019-09-11T15:00:00",
             "url": "posts/xiubi"
-        },
-        {
-            "title": "test",
-            "start": "2019-09-10",
-            "url": "posts/xiubi"
         }
     ],
     "className": "calendar-event",

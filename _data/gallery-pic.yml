@@ -1,5 +1,3 @@
-- src: /assets/img/xiubi.png
-  type: huo_dong
 - src: /gallery/oula.gif
   type: biao_qing_bao
 - src: /gallery/shale.png
@@ -11,13 +9,19 @@
 - src: /gallery/KOKORO1.jpg
   type: tou_gao
 - src: /gallery/KOKORO2A.jpg
-  type: huo_dong
+  type: tou_gao
 - src: /gallery/KOKORO2B.jpg
   type: tou_gao
+- src: /assets/img/xiubi.png
+  type: huo_dong
 - src: /gallery/KOKORO3.jpg
   type: tou_gao
 - src: /gallery/korororou.png
   type: tou_gao
+- src: /gallery/party.jpg
+  type: huo_dong
+- src: /gallery/party1.jpg
+  type: huo_dong
 - src: /gallery/kororozzz.PNG
   type: tou_gao
 - src: /gallery/kororozzz1.PNG
