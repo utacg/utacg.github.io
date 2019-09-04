@@ -11,6 +11,7 @@ __Updating Galleries Collections__ Put all the gallery images into `gallery/`,  
 ```
 - src: PATH OF THE IMAGE
   type: THE TAG OF THE IMAGE
+  credit: NAME OF THE CREATOR
 ```
 
 __Updating Posts__ Put the markdown and associated images into `_post/`, fill in the title and src of the header image. Make  the filename `YYYY-MM-DD-AUTHOR`
