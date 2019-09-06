@@ -14,8 +14,8 @@ $(function () {
 
 // Selecting the DOM objects
 const header = document.querySelector(".header-area");
-const modal = document.querySelector("#myModal");
-const modalImg = document.querySelector("#img01");
+const modal = document.querySelector("#Modal");
+const modalImg = document.querySelector("#modal_Img");
 const captionText = document.querySelector("#caption");
 
 // Modal img 
