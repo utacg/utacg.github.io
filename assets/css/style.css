@@ -14,6 +14,7 @@ html, body {
 	height: 100%;
 	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
+	scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -958,7 +959,7 @@ ul, ol {
 	display: flex;
 }
 
-.site-pagination a {
+.site-pagination button {
 	width: 38px;
 	height: 44px;
 	border-radius: 50%;
@@ -979,16 +980,18 @@ ul, ol {
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
+	background: transparent;
+	cursor: pointer;
 }
 
-.site-pagination a.active {
+.site-pagination button.active {
 	width: 44px;
 	margin: 0 10px;
 	color: salmon;
 	border: 2px solid salmon;
 }
 
-.site-pagination a.active:first-child {
+.site-pagination button.active:first-child {
 	margin-left: 0;
 }
 

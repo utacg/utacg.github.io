@@ -17,13 +17,14 @@ title: 推文
 <!-- Review section -->
 <section class="review-section">
 	<div class="container">
+		{%- increment counter -%}
 		{%- for post in site.posts -%}
+		<article id="post_{{counter}}" style="display: none">
 		{%- include post_brief.html -%}
+		{%- increment counter -%}
+		</article>
 		{%- endfor -%}
-		<div class="site-pagination">
-			<a href="#" class="active">01.</a>
-			<a href="#">02.</a>
-			<a href="#">03.</a>
+		<div class="site-pagination d-flex justify-content-center">
 		</div>
 	</div>
 </section>
