@@ -24,11 +24,9 @@ const add_btn_function = () => {
                 break;
             }
         }
-        let counter = 0;
         for (let i = post_no; i < post_no + 5; i++) {
             if ($(`#post_${i + 1}`).length != 0) {
                 $(`#post_${i + 1}`).fadeIn(100);
-                counter ++;
             } else {
                 break;
             }
