@@ -26,7 +26,7 @@ layout: gallery
       <div class="row">
         {%- for item in site.data.gallery-pic -%}
         <div class="col-lg-4 col-md-6 col-12 my-2 gallery-pics gallery-animation all {{item.type}}">
-            <img class="img-fluid" src="{{item.src}}" alt="credit: {{item.credit}}"/>
+            <img class="img-fluid" src="{{item.src}}" alt="{{item.credit}}"/>
         </div>
         {%- endfor -%}
       </div>

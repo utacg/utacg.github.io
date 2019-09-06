@@ -11,29 +11,27 @@ $(function () {
 	});
 });
 
+
+// Selecting the DOM objects
+const header = document.querySelector(".header-area");
+const modal = document.querySelector("#myModal");
+const modalImg = document.querySelector("#img01");
+const captionText = document.querySelector("#caption");
+
+// Modal img 
 $("#gallery img").on("click", (e) => {
-	const header = document.querySelector(".header-area");
-	header.style.display = "none";
-	const modal = document.getElementById("myModal");
-	console.log(e);
 	const target_img = e.target;
-	const modalImg = document.getElementById("img01");
-	const captionText = document.getElementById("caption");
+	header.style.display = "none";
 	modal.style.display = "block";
 	modalImg.src = target_img.src;
-	captionText.innerHTML = target_img.alt;
+	captionText.innerHTML = "Credit: " + target_img.alt;
 })
 
 $(".close").on("click", () => {
-	const modal = document.getElementById("myModal");
-	const modalImg = document.getElementById("img01");
-	const captionText = document.getElementById("caption");
 	modalImg.classList.add("shrink");
 	captionText.classList.add("fade_away");
-	console.log(captionText.classList);
 	setTimeout(() => {
 		modal.style.display = "none";
-		const header = document.querySelector(".header-area");
 		header.style.display = "block";
 		modalImg.classList.remove("shrink");
 		captionText.classList.remove("fade_away");
