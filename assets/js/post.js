@@ -36,8 +36,7 @@ const add_btn_function = () => {
         current_active = e.target;
         current_active.classList.add("active");
             setTimeout(() => {
-                const coordinate = $(".page-top-section .page-info").offset();
-                window.scrollTo(coordinate.top, coordinate.left);
+                window.scrollTo(0, 0);
             }, 110);
     });
 }
